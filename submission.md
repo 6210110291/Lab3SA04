@@ -16,7 +16,8 @@ Part6-1 - Part6-2
 
 
 <img src="6-2(2).jpg" width="300">
-<img src="6-3(3).jpg" width="300">
+
+<img src="6-2(3).jpg" width="300">
 
 
 
