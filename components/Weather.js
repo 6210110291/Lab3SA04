@@ -6,7 +6,7 @@ const Dev_Width = Dimensions.get("window").width
 
 export default function Weather(props) { 
   const [forecastInfo, setForecastInfo] = useState({
-    city: 'loading...',
+    name: 'loading...',
     icon: "",
     main: 'loading...',
     describtion: 'loading...',
@@ -24,6 +24,7 @@ export default function Weather(props) {
             setForecastInfo({
               icon: json.weather[0].icon,
               main: json.weather[0].main,
+              name: json.name,
               description: json.weather[0].description,
               temp: json.main.temp,
               pressure: json.main.pressure,
@@ -40,9 +41,7 @@ export default function Weather(props) {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source = {require('../bg.jpg')} style = {styles.backdrop}>
-        <Text>Zip Code is {props.zipCode}</Text>
         <Forecast {...forecastInfo} />
-        
         <StatusBar translucent={true} backgroundColor="#000"/>
       </ImageBackground>
 

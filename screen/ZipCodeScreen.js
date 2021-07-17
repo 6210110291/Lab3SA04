@@ -6,9 +6,9 @@ import { TouchableHighlight } from 'react-native-gesture-handler';
 const availableZipItems = [
     { place: 'Hatyai', code: '90110' },
     { place: 'Trang', code: '92000' },
-    { place: 'Chiangmai', code: '50000' },
-    { place: 'Khonkaen', code: '40000' },
-    { place: 'Chonburi', code: '20000' },
+    { place: 'Chiang Mai', code: '50000' },
+    { place: 'Khon Kaen', code: '40000' },
+    { place: 'Bangkok', code: '10110' },
 ]
 
 const ZipItem = ({place, code, navigation}) => (
