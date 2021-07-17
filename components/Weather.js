@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import {ImageBackground, Text, StyleSheet, StatusBar} from 'react-native'
+import {SafeAreaView, Dimensions, ImageBackground, Text, StyleSheet, StatusBar} from 'react-native'
 import Forecast from './Forecast'
+const Dev_Height = Dimensions.get("window").height
+const Dev_Width = Dimensions.get("window").width
 
 export default function Weather(props) { 
   const [forecastInfo, setForecastInfo] = useState({
+    city: 'loading...',
+    icon: "",
     main: 'loading...',
     describtion: 'loading...',
     temp: 0,
@@ -18,6 +22,7 @@ export default function Weather(props) {
         .then((response) => response.json())
         .then((json) => {
             setForecastInfo({
+              icon: json.weather[0].icon,
               main: json.weather[0].main,
               description: json.weather[0].description,
               temp: json.main.temp,
@@ -33,20 +38,28 @@ export default function Weather(props) {
    
 
   return (
-    <ImageBackground source = {require('../bg.jpg')} style = {styles.backdrop}>
-      <Text>Zip Code is {props.zipCode}</Text>
-      <Forecast {...forecastInfo} />
-      <StatusBar translucent={true} backgroundColor="#000"/>
-    </ImageBackground>
+    <SafeAreaView style={styles.container}>
+      <ImageBackground source = {require('../bg.jpg')} style = {styles.backdrop}>
+        <Text>Zip Code is {props.zipCode}</Text>
+        <Forecast {...forecastInfo} />
+        
+        <StatusBar translucent={true} backgroundColor="#000"/>
+      </ImageBackground>
+
+      
+    </SafeAreaView>
   );
 }
  
 const styles = StyleSheet.create({
+  container:{
+    height:Dev_Height,
+    width: Dev_Width
+  },
   backdrop: {
     flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
     height: '100%',
-    
-  }
+  },
 })
