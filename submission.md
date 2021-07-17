@@ -4,7 +4,9 @@
 section : 01
 
 ## Weather App
-Part6-1 - Part6-2
+
+### `Part6-1 - Part6-2`
+
 หน้าเริ่มต้นของแอป(แค่เปลี่ยนพื้นหลัง) :
 
 
@@ -21,7 +23,7 @@ Part6-1 - Part6-2
 
 
 
-Part6-3 - Part6-4
+### `Part6-3 - Part6-4`
 หน้า Weather (เสร็จเรียบร้อย) :
 
 
@@ -29,13 +31,16 @@ Part6-3 - Part6-4
 
 
 
-Part6-5
+### `Part6-5`
+
 ทำการปรับแต่งหน้า Home :
 
 
 <img src="6-5.jpg" width="300">
 
-Part6-6
+
+### `Part6-6`
+
 หน้า Home (เสร็จเรียบร้อย) :
 
 
@@ -47,6 +52,6 @@ Part6-6
 รวมหน้า Home และ หน้า Weather 
 
 
-<img src="6-6.jpg" width="200">  <img src="6-2(2).jpg" width="200">
+<img src="6-6.jpg" width="200">  <img src="6-4.jpg" width="200">
 
 
